@@ -3,9 +3,13 @@
 This project includes a set of Python scripts for converting video frames between formats, combining frames from different videos, reconstructing frames, and generating videos from frames. The project is divided into four main modules:
 
 1)Conversion: Convert JPEG frames to PNG format.
+
 2)Combination: Combine frames from two different videos using an alternating pixel technique.
+
 3)Reconstruction: Reconstruct video frames from combined frames.
+
 4)Video Creation: Convert frame sequences back into video files.
+
 
 **Requirements**
 Python 3.x
