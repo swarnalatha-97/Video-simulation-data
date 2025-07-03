@@ -73,7 +73,7 @@ This repository also includes multiple testing scenarios to evaluate performance
 
 ---
 
-## 🎞 Frame Directory Structure
+## Frame Directory Structure
 
 - `video1_frames`, `video2_frames`  
    Original frames extracted from the videos.
