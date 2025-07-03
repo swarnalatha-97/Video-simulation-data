@@ -1,82 +1,61 @@
-**Video Frame Processing and Reconstruction**
+#  Test Video Dataset Description
 
-This project includes a set of Python scripts for converting video frames between formats, combining frames from different videos, reconstructing frames, and generating videos from frames. The project is divided into four main modules:
+This repository contains a collection of **indoor and outdoor surveillance videos** used for evaluating our proposed scheme. The datasets are sourced from **UrbanTracker** and **Wisenet** projects.
 
-1)Conversion: Convert JPEG frames to PNG format.
+---
 
-2)Combination: Combine frames from two different videos using an alternating pixel technique.
+## Outdoor Videos
 
-3)Reconstruction: Reconstruct video frames from combined frames.
+### 1. Outdoor Video 1 (OV1) – *René Lévesque*
+- **Source:** [UrbanTracker](https://www.jpjodoin.com/urbantracker/dataset.html)
+- **Description:** Captures an office building and three nearby intersections. Each scene contains around **20 moving objects**.
+- **Resolution:** 1280 × 720  
+- **Frames:** 1000  
+- **Codec:** H.264  
+- **FPS:** 30  
 
-4)Video Creation: Convert frame sequences back into video files.
+### 2. Outdoor Video 2 (OV2) – *St Marc*
+- **Source:** [UrbanTracker](https://www.jpjodoin.com/urbantracker/dataset.html)
+- **Description:** Captures the Saint Marc and Maisonneuve intersection in Montréal, with **up to 14 moving objects**, including vehicles, bicycles, and pedestrians.
+- **Resolution:** 1280 × 720  
+- **Frames:** 1000  
+- **Codec:** H.264  
+- **FPS:** 30  
 
+### 3. Outdoor Video 3 (OV3) – *Sherbrooke*
+- **Source:** [UrbanTracker](https://www.jpjodoin.com/urbantracker/dataset.html)
+- **Description:** Captures the Sherbrooke/Amherst intersection from a **low-angle CCTV camera**, showing **cars and pedestrians**, with ~7 objects per scene.
+- **Resolution:** 800 × 600  
+- **Frames:** 1001  
+- **Codec:** H.264  
+- **FPS:** 30  
 
-**Requirements**
-Python 3.x
-OpenCV (cv2)
-NumPy
-FFmpeg (for video creation)
+---
 
-**Modules**
-1. jpg_png.py
-Function: Converts JPEG frames to PNG format.
+## Indoor Videos
 
-Usage:
+### 4. Indoor Video 1 (IV1) – *Wisenet - video2_1.avi*
+- **Source:** [Wisenet Dataset (Kaggle)](https://www.kaggle.com/datasets/abdelrhmannile/wisenet?resource=download)
+- **Description:** Captured by an indoor CCTV camera from `set_2/video2_1.avi`.
+- **Resolution:** 1280 × 720  
+- **Codec:** Xvid MPEG-4  
+- **FPS:** 30  
 
-from jpg_png import jpg_to_png
+### 5. Indoor Video 2 (IV2) – *Wisenet - video2_3.avi*
+- **Source:** [Wisenet Dataset (Kaggle)](https://www.kaggle.com/datasets/abdelrhmannile/wisenet?resource=download)
+- **Description:** Captured from `set_2/video2_3.avi`, depicting typical indoor movement scenarios.
+- **Resolution:** 1280 × 720  
+- **Codec:** Xvid MPEG-4  
+- **FPS:** 30  
 
-jpg_to_png("/path/to/jpg_frames", "/path/to/png_frames")
+### 6. Indoor Video 3 (IV3) – *Atrium*
+- **Source:** [UrbanTracker](https://www.jpjodoin.com/urbantracker/dataset.html)
+- **Description:** Captures pedestrian movement inside École Polytechnique Montréal’s atrium.
+- **Resolution:** 800 × 600  
+- **Frames:** 4540  
+- **Codec:** Xvid MPEG-4  
+- **FPS:** 30  
 
-2. combine_videos.py
-Function: Combines frames from two videos using an alternating pixel technique.
+---
 
-Usage:
-
-from combine_videos import Combine_frames
-
-Combine_frames("/path/to/video1_frames", "/path/to/video2_frames", "/path/to/output_combined_frames", "png")
-
-
-3. reconstruct_videos.py
-Function: Reconstructs frames from combined frames.
-
-Usage:
-
-from reconstruct_videos import reconstruct_frame
-
-reconstruct_frame("/path/to/combined_frames", "/path/to/reconstruct_video1", "/path/to/reconstruct_video2", "png", 30, 30)
-
-4. frames_to_videos.py
-Function: Converts frames back into a video.
-
-Usage:
-
-from frames_to_videos import frames_to_video
-frames_to_video("/path/to/frames", "/path/to/output_video.mov")
-
-**Example Workflow**
-
-Convert Frames: Convert JPEG frames to PNG format for each video.
-
-jpg_to_png("/path/to/video1_frames_jpg", "/path/to/video1_frames_png")
-jpg_to_png("/path/to/video2_frames_jpg", "/path/to/video2_frames_png")
-
-Combine Frames: Combine frames from two videos into one sequence.
-
-Combine_frames("/path/to/video1_frames_png", "/path/to/video2_frames_png", "/path/to/combined_frames_png", "png")
-
-Reconstruct Frames: Reconstruct frames from the combined frame sequence.
-
-reconstruct_frame("/path/to/combined_frames_png", "/path/to/reconstruct_video1_frames_png", "/path/to/reconstruct_video2_frames_png", "png", 30, 30)
-
-Generate Videos: 
-Convert the reconstructed and combined frames back into video files.
-
-frames_to_video("/path/to/video1_frames_png", "/path/to/video1.mov")
-frames_to_video("/path/to/video2_frames_png", "/path/to/video2.mov")
-
-**Notes**
-
-Ensure that the directories specified in the paths exist before running the scripts.
-Adjust frame rates and video parameters as needed for your specific use case.
-FFmpeg must be installed and available in your system PATH for video creation.
+ All videos in this repository are used solely for research and testing purposes. 
