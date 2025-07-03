@@ -58,4 +58,38 @@ This repository contains a collection of **indoor and outdoor surveillance video
 
 ---
 
+##  Test Scenarios
+
+This repository also includes multiple testing scenarios to evaluate performance under varying frame configurations and compression settings. These folders are named based on the number of frames used in the test:
+
+- `10-10-testing`, `15-15-testing`, `15-20-testing`, `20-15-testing`, `20-20-testing`, `20-30-testing`, `30-20-testing`, `30-30-testing`  
+  Represent combinations of different frame count tests (e.g., 10 frames from video1 with 10 frames from video2, and so on).
+
+- `100-100-testing`, `300-300-testing`  
+   Larger scale tests with 100 or 300 frames per video.
+
+- `H.265`  
+   Contains test outputs or encodings using the H.265 codec.
+
+---
+
+## 🎞 Frame Directory Structure
+
+- `video1_frames`, `video2_frames`  
+   Original frames extracted from the videos.
+
+- `video1_frames_png`, `video2_frames_png`  
+   Same frames as above but converted to `.png` format.
+
+- `Combined-frames-png`  
+    Frame-by-frame merged outputs of video1 and video2.
+
+- `reconstruct-video1-frames-png`, `reconstruct-video2-frames-png`  
+   Reconstructed frames for individual video streams after processing or decompression.
+
+- `raw-videos`  
+    Contains the original `.avi` or `.mov` video files used for testing.
+
+---
+
  All videos in this repository are used solely for research and testing purposes. 
