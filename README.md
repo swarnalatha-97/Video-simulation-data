@@ -87,9 +87,17 @@ This repository also includes multiple testing scenarios to evaluate performance
 - `reconstruct-video1-frames-png`, `reconstruct-video2-frames-png`  
    Reconstructed frames for individual video streams after processing or decompression.
 
-- `raw-videos`  
-    Contains the original `.avi` or `.mov` video files used for testing.
-
 ---
 
- All videos in this repository are used solely for research and testing purposes. 
+## Access to  Video Files
+
+The generated raw video files used in this project are available for download on OneDrive:
+
+🔗 https://saluki-my.sharepoint.com/:f:/g/personal/swarnalatha_camalapuramsubramanyam_siu_edu/EsqEpc2tmOlFrQj_FBn_0hEBsQubwOuyoxaDzWWlWB-how?e=JtdGy4
+
+These files were generated locally during simulation runs. Due to GitHub’s file size limitations, we have opted not to upload these files directly to the repository. Instead, they are securely hosted on OneDrive for easy access and sharing.
+
+If you encounter any issues accessing the files or have related questions, please contact:
+
+Swarnalatha – swarnalatha.camalapuram97@gmail.com
+
